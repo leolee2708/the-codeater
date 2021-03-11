@@ -1,6 +1,10 @@
-export default function HomePage() {
-  return  <div>
-      <p>Hello!</p>
-       </div>
-  
+import Page from '../components/Page';
+
+export default function IndexPage() {
+  return <Page>
+    <p>Hello!</p>
+    <code>var</code>
+    <p>i am a child</p>
+  </Page>
+
 }

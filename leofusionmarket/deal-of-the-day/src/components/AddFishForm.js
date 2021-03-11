@@ -10,6 +10,7 @@ class AddFishForm extends React.Component {
   createFish = (event) => {
     event.preventDefault();
     const fish = {
+      //new react element with current 
       name: this.nameRef.current.value,
       price: parseFloat(this.priceRef.current.value),
       status: this.statusRef.current.value,

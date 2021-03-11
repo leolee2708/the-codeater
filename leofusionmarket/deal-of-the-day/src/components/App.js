@@ -4,7 +4,29 @@ import Inventory from "./Inventory";
 import Order from "./Order";
 import sampleFishes from "../sample-fishes";
 import Fish from "./Fish";
-import base from "../base";
+import base from "../database";
+// import firebaseApp from '../database';
+// import firebase, { app } from 'firebase';
+// import withFirebaseAuth from 'react-with-firebase-auth';
+// import'firebase/auth';
+// import 'firebase/firestore';
+// import 'firebase/database'
+// import favico from '../css/images/favico.ico';
+
+
+// const firebaseAppAuth = firebaseApp.auth();
+// const providers = {
+//   googleProvider: new firebase.auth.GoogleAuthProvider(),
+// };
+
+// const {
+//   user,
+//   signOut,
+//   signInWithGoogle,
+// } = this.props;
+
+
+
 
 class App extends React.Component {
   state = {
@@ -66,30 +88,52 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className="catch-of-the-day">
-        <div className="menu">
-          <Header tagline="VNOMZ CAFE & FARMER MARKET" />
-          <ul className="fishes">
-            {Object.keys(this.state.fishes).map((key) => (
-              <Fish
-                key={key}
-                index={key}
-                details={this.state.fishes[key]}
-                addToOrder={this.addToOrder}
-              />
-            ))}
-          </ul>
-        </div>
-        <Order fishes={this.state.fishes} order={this.state.order} />
-        <Inventory
-          addFish={this.addFish}
-          updateFish={this.updateFish}
-          loadSampleFishes={this.loadSampleFishes}
-          fishes={this.state.fishes}
-        />
-      </div>
+      // <div className="App">
+      //   <header className="App-header">
+      //     {/* <img src={favico} className="App-logo" alt="logo" /> */}
+      //     {
+      //       user
+      //         ? <p>Hello, {user.displayName}</p>
+      //         : <p>Please sign in.</p>
+      //     }
+      //     {
+      //       user
+      //         ? <button onClick={signOut}>Sign out</button>
+      //         : <button onClick={signInWithGoogle}>Sign in with Google</button>
+      //     }
+      //   </header>
+
+        <div className="catch-of-the-day">
+          <div className="menu">
+            <Header tagline="LEO's FUSION CAFE & FARMER MARKET" />
+            <ul className="fishes">
+              {Object.keys(this.state.fishes).map((key) => (
+                <Fish
+                  key={key}
+                  index={key}
+                  details={this.state.fishes[key]}
+                  addToOrder={this.addToOrder}
+                />
+              ))}
+            </ul>
+          </div>
+          <Order fishes={this.state.fishes} order={this.state.order} />
+          <Inventory
+            addFish={this.addFish}
+            updateFish={this.updateFish}
+            loadSampleFishes={this.loadSampleFishes}
+            fishes={this.state.fishes}
+          />
+        </div> 
+      // </div>
     );
   }
 }
+//setting up authentication
+// export default withFirebaseAuth({
+
+//   providers,
+//   firebaseAppAuth,
+// })(App);
 
 export default App;

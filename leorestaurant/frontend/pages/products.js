@@ -1,9 +1,5 @@
-export default function SellPage() {
-return(
-    
-    <div>
-        <p>Hello!</p>
-         </div>
-    );
-  }
-  
+export default function ProductsPage() {
+  return <div>
+    <p>Hey!</p>
+  </div>
+}

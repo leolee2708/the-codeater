@@ -228,7 +228,8 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #d4d4d4;
+  background: orange;
+  background-image:url("./images/seafood2.jpg");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', sans-serif;

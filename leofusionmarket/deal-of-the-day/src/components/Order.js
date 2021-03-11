@@ -12,8 +12,9 @@ class Order extends React.Component {
     }
     return (
       <li key={key}>
-         {count} lbs of {fish.name}
-        {formatPrice(count * fish.price)}
+     <span> 🔵 {count} of {fish.name}
+        {formatPrice(count * fish.price)}💰 
+        </span>
       </li>
     );
   };
